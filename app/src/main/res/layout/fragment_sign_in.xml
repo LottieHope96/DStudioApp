@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sign_in_container"
+    android:padding="@dimen/whole_page_padding"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/sign_in_background"
+        android:src="@drawable/sign_in_background"
+        android:scaleType="fitStart"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/log_in_text"
+        android:layout_marginTop="@dimen/login_now_top_padding"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/create_new_text"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/login_now_text"
+        android:layout_marginStart="@dimen/login_page_padding"
+        android:textSize="@dimen/h2_title_size"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_new_text"
+        android:text="@string/if_you_are_new_text"
+        app:layout_constraintBottom_toTopOf="@id/username_box"
+        app:layout_constraintTop_toBottomOf="@id/log_in_text"
+        android:layout_marginBottom="@dimen/inter_edit_text_padding"
+        android:padding="@dimen/login_page_padding"
+        android:textSize="@dimen/h3_title_size"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/create_btn"
+        android:text="@string/create_new_text"
+        android:textColor="@color/black"
+        android:layout_marginBottom="@dimen/inter_edit_text_padding"
+        android:padding="@dimen/login_page_padding"
+        android:textSize="@dimen/h3_title_size"
+        app:layout_constraintStart_toEndOf="@id/create_new_text"
+        app:layout_constraintBottom_toTopOf="@id/username_box"
+        app:layout_constraintTop_toBottomOf="@id/log_in_text"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_box"
+        app:layout_constraintBottom_toTopOf="@id/password_box"
+        app:layout_constraintTop_toBottomOf="@id/create_btn"
+        android:hint="@string/username_hint"
+        android:background="@drawable/rounded_background"
+        android:padding="@dimen/edit_text_padding"
+        android:layout_marginStart="@dimen/login_page_padding"
+        android:layout_marginEnd="@dimen/login_page_padding"
+        android:layout_marginBottom="@dimen/inter_text_padding"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/password_box"
+        app:layout_constraintBottom_toTopOf="@id/forgot_password_text"
+        app:layout_constraintTop_toBottomOf="@id/username_box"
+        android:hint="@string/password_hint"
+        android:layout_marginStart="@dimen/login_page_padding"
+        android:layout_marginEnd="@dimen/login_page_padding"
+        android:password="true"
+        android:background="@drawable/rounded_background"
+        android:padding="@dimen/edit_text_padding"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/forgot_password_text"
+        android:text="@string/forgot_passcode_text"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_btn"
+        app:layout_constraintTop_toBottomOf="@id/password_box"
+        android:padding="@dimen/login_page_padding"
+        android:textSize="@dimen/h3_title_size"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reset_btn"
+        android:text="@string/reset_text"
+        android:textColor="@color/black"
+        android:padding="@dimen/login_page_padding"
+        android:textSize="@dimen/h3_title_size"
+        app:layout_constraintStart_toEndOf="@id/forgot_password_text"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_btn"
+        app:layout_constraintTop_toBottomOf="@id/password_box"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_in_btn"
+        app:layout_constraintBottom_toTopOf="@id/sign_in_skip_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/reset_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="@dimen/standard_padding"
+        android:layout_marginEnd="@dimen/standard_padding"
+        android:backgroundTint="@color/deep_pink"
+        android:text="@string/login_text"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:padding="@dimen/login_page_padding"
+        android:textSize="@dimen/h3_title_size"
+        android:layout_marginBottom="@dimen/inter_text_padding"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/sign_in_skip_btn"
+        app:layout_constraintTop_toBottomOf="@id/sign_in_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/skip_btn_text"
+        android:textAlignment="center"
+        android:paddingBottom="@dimen/end_page_bottom_padding"
+        android:textColor="@color/medium_grey"
+        android:textSize="@dimen/h3_title_size"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

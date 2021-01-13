@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/step_width"
+    android:layout_height="@dimen/step_height"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/obey_constraint"
+        android:id="@+id/step_background"
+        android:src="@drawable/rounded_background_blue"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/step_icon_size"
+        android:layout_height="@dimen/step_icon_size"
+        android:layout_margin="@dimen/icon_padding"
+        android:id="@+id/icon_background"
+        android:src="@drawable/rounded_background_white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="@dimen/obey_constraint"
+        android:layout_height="@dimen/obey_constraint"
+        android:src="@drawable/mortar"
+        android:id="@+id/step_icon"
+        android:layout_margin="@dimen/standard_padding"
+        app:layout_constraintTop_toTopOf="@id/icon_background"
+        app:layout_constraintStart_toStartOf="@id/icon_background"
+        app:layout_constraintEnd_toEndOf="@id/icon_background"
+        app:layout_constraintBottom_toBottomOf="@id/icon_background"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/icon_background"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/education_text"
+        android:paddingTop="@dimen/standard_padding"
+        android:paddingStart="@dimen/inter_text_padding"
+        android:textSize="@dimen/h3_title_size"
+        android:textColor="@color/medium_grey"
+        android:id="@+id/step_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/step_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingTop="@dimen/standard_padding"
+        android:paddingStart="@dimen/inter_text_padding"
+        android:text="@string/two_steps_left_text"
+        android:id="@+id/step_steps_left"
+        />
+
+    <FrameLayout
+        android:layout_width="@dimen/obey_constraint"
+        android:layout_height="@dimen/underline_view_height"
+        app:layout_constraintStart_toStartOf="@id/step_steps_left"
+        app:layout_constraintEnd_toEndOf="@id/step_steps_left"
+        app:layout_constraintTop_toBottomOf="@id/step_steps_left"
+        android:layout_marginStart="@dimen/inter_text_padding"
+        android:layout_marginBottom="@dimen/inter_text_padding"
+        android:id="@+id/divider"
+        android:background="@color/medium_grey"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="@dimen/arrow_size"
+        android:layout_height="@dimen/arrow_size"
+        android:src="@drawable/right_arrow"
+        android:layout_marginEnd="@dimen/end_step_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/step_steps_left" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">DStudioApp</string>
+    <string name="skip_btn_text">Skip Now</string>
+    <string name="next_btn_text">Next</string>
+    <string name="home_page_upsell">Millions of people use to turn their ideas into reality.</string>
+    <string name="get_started_home_page">Get started</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="buy_pro_string"><u>Buy Pro $23.49</u></string>
+    <string name="professional_title">Professional</string>
+    <string name="four_steps_left">"04 Steps \nLeft"</string>
+    <string name="sign_in_upsell_msg">You need to log in to get the most out of DStudio</string>
+    <string name="ellipsis">...</string>
+    <string name="applied_number">28</string>
+    <string name="applied_text">Applied</string>
+    <string name="reviewed_text">Reviewed</string>
+    <string name="reviewed_value">73</string>
+    <string name="contacted_text">Contacted</string>
+    <string name="contacted_value">18</string>
+    <string name="complete_profile_title">Complete Profile</string>
+    <string name="login_now_text">Hey,\nLogin Now.</string>
+    <string name="if_you_are_new_text">If you are new/</string>
+    <string name="create_new_text">Create New</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_passcode_text">Forgot Passcode?/</string>
+    <string name="reset_text">Reset</string>
+    <string name="login_text">Login</string>
+    <string name="education_text">Education</string>
+    <string name="two_steps_left_text">02 Steps\nLeft</string>
+</resources>

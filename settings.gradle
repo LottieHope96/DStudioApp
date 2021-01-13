@@ -1,0 +1,2 @@
+rootProject.name = "DStudioApp"
+include ':app'

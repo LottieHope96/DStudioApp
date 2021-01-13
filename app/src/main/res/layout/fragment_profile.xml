@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_height="match_parent" android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_container"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_button"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="@dimen/standard_padding"
+            android:textSize="@dimen/h3_title_size"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Back"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="@dimen/h3_title_size"
+            android:padding="@dimen/standard_padding"
+            android:layout_marginEnd="@dimen/standard_padding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@string/ellipsis"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/profile_img_height"
+            app:layout_constraintTop_toBottomOf="@id/back_button"
+            android:src="@drawable/user_headshot"
+            android:id="@+id/user_image"
+            android:scaleType="fitCenter"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/user_image"
+            android:id="@+id/user_attributes"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:paddingStart="@dimen/inter_text_padding"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/applied_box"
+                android:text="@string/applied_text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/applied_box"
+                app:layout_constraintEnd_toEndOf="@id/applied_box"
+                app:layout_constraintTop_toBottomOf="@id/applied_box"
+                android:text="@string/applied_number"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/reviewed_box"
+                android:text="@string/reviewed_text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/reviewed_box"
+                app:layout_constraintEnd_toEndOf="@id/reviewed_box"
+                app:layout_constraintTop_toBottomOf="@id/reviewed_box"
+                android:text="@string/reviewed_value"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingEnd="@dimen/inter_text_padding"
+                android:id="@+id/contacted_box"
+                android:text="@string/contacted_text"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/contacted_box"
+                app:layout_constraintEnd_toEndOf="@id/contacted_box"
+                app:layout_constraintTop_toBottomOf="@id/contacted_box"
+                android:text="@string/contacted_value"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/user_attributes"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/complete_profile_title"
+            android:paddingStart="@dimen/inter_text_padding"
+            android:paddingTop="@dimen/inter_text_padding"
+            android:textColor="@color/black"
+            android:id="@+id/profile_title"
+            android:textSize="@dimen/h2_title_size"
+            android:textStyle="bold"
+            />
+
+        <include layout="@layout/profile_step"
+            android:layout_marginStart="@dimen/step_padding"
+            android:layout_marginTop="@dimen/standard_padding"
+            android:id="@+id/education_step"
+            app:layout_constraintTop_toBottomOf="@id/profile_title"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="@dimen/step_width"
+            android:layout_height="@dimen/step_height" />
+
+        <include layout="@layout/profile_step"
+            android:layout_marginStart="@dimen/step_padding"
+            android:layout_marginTop="@dimen/standard_padding"
+            android:id="@+id/professional_step"
+            app:layout_constraintTop_toBottomOf="@id/profile_title"
+            app:layout_constraintStart_toEndOf="@id/education_step"
+            android:layout_width="@dimen/step_width"
+            android:layout_height="@dimen/step_height" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/education_step"
+            android:paddingTop="@dimen/inter_text_padding"
+            android:paddingBottom="@dimen/inter_text_padding"
+            android:textAlignment="center"
+            android:text="@string/buy_pro_string"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
